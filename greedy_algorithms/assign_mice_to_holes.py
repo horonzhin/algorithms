@@ -16,7 +16,7 @@
 # Вывод: -4, -2, -1
 
 def assign_mice(mice, holes):
-    """Assign Mice to Holes (Распределить мышей по норам)"""
+    """Assign Mice to Holes (Распределить мышей по норам). Сложность O(n log n)"""
     # проверим одинаковое ли кол-во мышей и норок
     if len(mice) != len(holes):
         return 'Number of mice and holes not the same'
