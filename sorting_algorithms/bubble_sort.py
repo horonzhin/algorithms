@@ -5,7 +5,7 @@
 # Сложность O(n^2)
 
 def bubble_sort_1(arr):
-    """Bubble Sort (Пузырьковая сортировка)"""
+    """Bubble Sort (Пузырьковая сортировка). Сложность O(n^2)"""
     swap = False
     iterations = 0
     while not swap:
@@ -21,7 +21,7 @@ def bubble_sort_1(arr):
 
 
 def bubble_sort_2(arr):
-    """Bubble Sort (Пузырьковая сортировка)"""
+    """Bubble Sort (Пузырьковая сортировка). Сложность O(n^2)"""
     iterations = 0
     for i in range(len(arr)):
         for j in range(len(arr) - i - 1):

@@ -4,7 +4,7 @@
 # Сложность тоже O(n^2), но в сравнении с Bubble Sort, по времени Selection Sort чуть быстрее.
 
 def selection_sort(arr):
-    """Selection Sort (Сортировка по выбору)"""
+    """Selection Sort (Сортировка по выбору). Сложность O(n^2)"""
     suffix_st = 0
     while suffix_st != len(arr):
         for i in range(suffix_st, len(arr)):
