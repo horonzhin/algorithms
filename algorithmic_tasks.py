@@ -69,4 +69,46 @@ def deep_reverse(arr):
 
 
 # *********************************************************************************************************************
+# Задача: Учитывая целое число x, верните, true если x это палиндром в противном случае false
 
+def is_palindrome_str_1(x: int) -> bool:
+    string = str(x)
+    size = len(string)
+    mid = size // 2
+    if size % 2 == 0:
+        return string[0:mid] == string[mid:][::-1]
+    else:
+        return string[0:mid] == string[mid+1:][::-1]
+
+
+def is_palindrome_str_2(x: int) -> bool:
+    if x < 0:
+        return False
+    return str(x) == str(x)[::-1]
+
+
+x = 121
+print(is_palindrome_str_1(x))
+print(is_palindrome_str_2(x))
+
+
+# *********************************************************************************************************************
+# Задача: Учитывая целое число x, верните, true если x это палиндром в противном случае false.
+# БЕЗ преобразования x в строку
+
+def is_palindrome_int(x: int) -> bool:
+    if x < 0:
+        return False
+    new_num = 0
+    origin_num = x
+    while x != 0:
+        new_num = new_num * 10 + x % 10
+        x //= 10  # убираем последнюю цифру
+    return new_num == origin_num
+
+
+x = 121
+print(is_palindrome_int(x))
+
+
+# *********************************************************************************************************************
