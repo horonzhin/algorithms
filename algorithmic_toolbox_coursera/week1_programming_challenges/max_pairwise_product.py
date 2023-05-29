@@ -19,6 +19,6 @@ def max_pairwise_product_fast(numbers):
 
 
 if __name__ == '__main__':
-    amount_of_numbers = int(input())
-    input_numbers = list(map(int, input().split()))
+    amount_of_numbers = int(input('Введите количество чисел в последовательности: '))
+    input_numbers = list(map(int, input('Введите по отдельности числа для последовательности через пробел: ').split()))
     print(max_pairwise_product_fast(input_numbers))
