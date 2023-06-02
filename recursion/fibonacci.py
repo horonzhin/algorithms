@@ -23,7 +23,6 @@ def fibo_dict(n, temp_dict):
 def fibo_iteration(n):
     """"
     Вычисление Фибоначчи с использованием массива и итерации
-    (вариант без рекурсии, самый оптимальный в вычислении Фибоначчи).
     В данном случае сложность O(n), но если числа будут очень большими, то сложность может увеличиться до O(n^2).
     """
     arr = [0 for i in range(0, n + 1)]
@@ -34,10 +33,24 @@ def fibo_iteration(n):
     return arr[-1]
 
 
+def fibonacci_last_digit(n):
+    """
+    Вычисление Фибоначчи с использованием временных переменных и итерации.
+    В данном случае сложность O(n), но если числа будут очень большими, то сложность может увеличиться до O(n^2).
+    """
+    if n <= 1:
+        return n
+    previous = 0
+    current = 1
+    for _ in range(n - 1):
+        previous, current = current, previous + current
+    return current
+
+
 if __name__ == '__main__':
     n = 20
     temp_dict = {0: 0, 1: 1, 2: 1}
     print(f'Фибоначчи числа {n} с помощью рекурсии: {fibo_recursion(n)}')
     print(f'Фибоначчи числа {n} с помощью словаря: {fibo_dict(n, temp_dict)}')
-    print(f'Фибоначчи числа {n} с помощью итерации: {fibo_iteration(n)}')
-
+    print(f'Фибоначчи числа {n} с помощью массива и итерации: {fibo_iteration(n)}')
+    print(f'Фибоначчи числа {n} с помощью переменных и итерации: {fibonacci_last_digit(n)}')

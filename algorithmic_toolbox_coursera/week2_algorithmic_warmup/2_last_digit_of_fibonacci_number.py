@@ -1,3 +1,8 @@
+from check import timer, calls_counter
+
+
+@timer
+@calls_counter
 def fibonacci_last_digit(n):
     """
     Вычисление Фибоначчи с использованием временных переменных и итерации.
