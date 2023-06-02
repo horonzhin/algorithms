@@ -1,3 +1,8 @@
+from check import timer, calls_counter
+
+
+@timer
+@calls_counter
 def fibonacci_number(n):
     """Последовательность Фибоначчи с помощью рекурсии. Сложность O(2^n)"""
     if n <= 1:
